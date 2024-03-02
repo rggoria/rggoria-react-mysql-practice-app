@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 01, 2024 at 11:20 AM
+-- Generation Time: Mar 02, 2024 at 11:40 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `crud`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `book`
+--
+
+CREATE TABLE `book` (
+  `id` int(11) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `description` varchar(50) NOT NULL,
+  `cover` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `book`
+--
+
+INSERT INTO `book` (`id`, `title`, `description`, `cover`) VALUES
+(1, 'Sample Title', 'Sample Description', 'Sample Cover'),
+(3, 'Pokemon', 'Pokemon', 'Pokemon');
 
 -- --------------------------------------------------------
 
@@ -75,6 +96,12 @@ INSERT INTO `users` (`id`, `name`, `phone`, `email`) VALUES
 --
 
 --
+-- Indexes for table `book`
+--
+ALTER TABLE `book`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `student`
 --
 ALTER TABLE `student`
@@ -89,6 +116,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `book`
+--
+ALTER TABLE `book`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `student`
